@@ -1,15 +1,86 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body{
-    height: 100%;
-    width: 100%;
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Arial", sans-serif;
 }
-:root{
-    --bg-color : #060606;
-    --primary-color : #e8e8e8;
+:root {
+  --bg-color: #060606;
+  --primary-color: #e8e8e8;
+  --btn-bg-color: rgb(215, 215, 215);
+  --btn-delete-color: rgb(255, 134, 113);
+
+  /*Spaceing*/
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-l: 18px;
+  --space-xl: 24px;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  padding: var(--space-m) var(--space-l);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav button {
+  padding: var(--space-s) var(--space-l);
+  background-color: var(--btn-bg-color);
+  border: none;
+  border-radius: var(--space-s);
+  outline: none;
+  cursor: pointer;
+}
+section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-l);
+  /* padding: ; */
+}
+
+section div.box {
+  padding: var(--space-s) var(--space-l);
+  /* background-color: red; */
+  border: 1px solid grey;
+  border-radius: var(--space-s);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  cursor: grabbing;
+  gap: var(--space-l);
+}
+section div .heading {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aqua; */
+}
+.tasks {
+  border: 1px solid gray;
+  border-radius: var(--space-s);
+  padding: var(--space-s) var(--space-s);
+}
+.tasks button {
+  padding: var(--space-s) var(--space-l);
+  background-color: var(--btn-delete-color);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--space-s);
+  outline: none;
+  /* justify-self: end; */
+  cursor: pointer;
 }
